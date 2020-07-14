@@ -1,0 +1,22 @@
+[2020-07-14 16:48:08] INFO [<module>: run_all.py, 6] ================================== 测试开始 ==================================
+[2020-07-14 16:48:09] ERROR [send_email: send_email.py, 46] (535, b'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+[2020-07-14 16:48:09] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
+[2020-07-14 16:50:27] INFO [<module>: run_all.py, 6] ================================== 测试开始 ==================================
+[2020-07-14 16:50:27] DEBUG [_new_conn: connectionpool.py, 226] Starting new HTTP connection (1): 127.0.0.1:12639
+[2020-07-14 16:50:27] DEBUG [_make_request: connectionpool.py, 433] http://127.0.0.1:12639 "POST http://115.28.108.130:5000/api/user/login/ HTTP/1.1" 200 21
+[2020-07-14 16:50:27] INFO [log_case_info: case_log.py, 11] 测试用例：test_user_login_normal
+[2020-07-14 16:50:27] INFO [log_case_info: case_log.py, 12] url：http://115.28.108.130:5000/api/user/login/
+[2020-07-14 16:50:27] INFO [log_case_info: case_log.py, 13] 请求参数：{"name": "张三","password":"123456"}
+[2020-07-14 16:50:27] INFO [log_case_info: case_log.py, 14] 期望结果：<h1>登录成功</h1>
+[2020-07-14 16:50:27] INFO [log_case_info: case_log.py, 15] 实际结果：<h1>登录成功</h1>
+[2020-07-14 16:50:27] DEBUG [_new_conn: connectionpool.py, 226] Starting new HTTP connection (1): 127.0.0.1:12639
+[2020-07-14 16:50:28] DEBUG [_make_request: connectionpool.py, 433] http://127.0.0.1:12639 "POST http://115.28.108.130:5000/api/user/login/ HTTP/1.1" 200 42
+[2020-07-14 16:50:28] INFO [log_case_info: case_log.py, 11] 测试用例：test_user_login_password_wrong
+[2020-07-14 16:50:28] INFO [log_case_info: case_log.py, 12] url：http://115.28.108.130:5000/api/user/login/
+[2020-07-14 16:50:28] INFO [log_case_info: case_log.py, 13] 请求参数：{"name": "张三","password":"1234567"}
+[2020-07-14 16:50:28] INFO [log_case_info: case_log.py, 14] 期望结果：<h1>失败，用户名或密码错误</h1>
+[2020-07-14 16:50:28] INFO [log_case_info: case_log.py, 15] 实际结果：<h1>失败，用户名或密码错误</h1>
+[2020-07-14 16:50:28] DEBUG [query_db: db.py, 21] select * from user where name = '张三'
+[2020-07-14 16:50:38] DEBUG [query_db: db.py, 21] select * from user where name = '范冰冰'
+[2020-07-14 16:50:48] ERROR [send_email: send_email.py, 46] (535, b'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+[2020-07-14 16:50:48] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
